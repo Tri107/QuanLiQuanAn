@@ -59,7 +59,7 @@ namespace QLQuanAn
             RestaurantManager r= new RestaurantManager();
             this.Hide();//ẩn form login
             r.ShowDialog();//hiện theo thứ tự
-            this.Show();
+            
 
         }
     }

@@ -31,19 +31,19 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSuaBan = new System.Windows.Forms.Button();
+            this.btnXemBan = new System.Windows.Forms.Button();
+            this.btnXoaBan = new System.Windows.Forms.Button();
+            this.btnThemBan = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.txtIDBan = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.txtTenBan = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.cmbTrangThaiBan = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -72,60 +72,67 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.btnSuaBan);
+            this.panel2.Controls.Add(this.btnXemBan);
+            this.panel2.Controls.Add(this.btnXoaBan);
+            this.panel2.Controls.Add(this.btnThemBan);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1307, 100);
             this.panel2.TabIndex = 1;
             // 
-            // button4
+            // btnSuaBan
             // 
-            this.button4.Location = new System.Drawing.Point(304, 12);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(95, 70);
-            this.button4.TabIndex = 0;
-            this.button4.Text = "Sửa";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnSuaBan.Location = new System.Drawing.Point(304, 12);
+            this.btnSuaBan.Name = "btnSuaBan";
+            this.btnSuaBan.Size = new System.Drawing.Size(95, 70);
+            this.btnSuaBan.TabIndex = 0;
+            this.btnSuaBan.Text = "Sửa";
+            this.btnSuaBan.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnXemBan
             // 
-            this.button3.Location = new System.Drawing.Point(465, 12);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(95, 70);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "Xem";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnXemBan.Location = new System.Drawing.Point(465, 12);
+            this.btnXemBan.Name = "btnXemBan";
+            this.btnXemBan.Size = new System.Drawing.Size(95, 70);
+            this.btnXemBan.TabIndex = 0;
+            this.btnXemBan.Text = "Xem";
+            this.btnXemBan.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnXoaBan
             // 
-            this.button2.Location = new System.Drawing.Point(163, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(95, 70);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "Xóa";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnXoaBan.Location = new System.Drawing.Point(163, 12);
+            this.btnXoaBan.Name = "btnXoaBan";
+            this.btnXoaBan.Size = new System.Drawing.Size(95, 70);
+            this.btnXoaBan.TabIndex = 0;
+            this.btnXoaBan.Text = "Xóa";
+            this.btnXoaBan.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnThemBan
             // 
-            this.button1.Location = new System.Drawing.Point(12, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(95, 70);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Thêm";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnThemBan.Location = new System.Drawing.Point(12, 12);
+            this.btnThemBan.Name = "btnThemBan";
+            this.btnThemBan.Size = new System.Drawing.Size(95, 70);
+            this.btnThemBan.TabIndex = 0;
+            this.btnThemBan.Text = "Thêm";
+            this.btnThemBan.UseVisualStyleBackColor = true;
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.textBox2);
+            this.panel3.Controls.Add(this.txtIDBan);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Location = new System.Drawing.Point(782, 106);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(513, 97);
             this.panel3.TabIndex = 2;
+            // 
+            // txtIDBan
+            // 
+            this.txtIDBan.Location = new System.Drawing.Point(101, 25);
+            this.txtIDBan.Name = "txtIDBan";
+            this.txtIDBan.Size = new System.Drawing.Size(308, 26);
+            this.txtIDBan.TabIndex = 1;
             // 
             // label1
             // 
@@ -138,12 +145,19 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.textBox1);
+            this.panel4.Controls.Add(this.txtTenBan);
             this.panel4.Controls.Add(this.label2);
             this.panel4.Location = new System.Drawing.Point(782, 219);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(513, 97);
             this.panel4.TabIndex = 3;
+            // 
+            // txtTenBan
+            // 
+            this.txtTenBan.Location = new System.Drawing.Point(101, 25);
+            this.txtTenBan.Name = "txtTenBan";
+            this.txtTenBan.Size = new System.Drawing.Size(308, 26);
+            this.txtTenBan.TabIndex = 1;
             // 
             // label2
             // 
@@ -156,12 +170,20 @@
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.comboBox1);
+            this.panel5.Controls.Add(this.cmbTrangThaiBan);
             this.panel5.Controls.Add(this.label3);
             this.panel5.Location = new System.Drawing.Point(782, 334);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(513, 97);
             this.panel5.TabIndex = 3;
+            // 
+            // cmbTrangThaiBan
+            // 
+            this.cmbTrangThaiBan.FormattingEnabled = true;
+            this.cmbTrangThaiBan.Location = new System.Drawing.Point(101, 17);
+            this.cmbTrangThaiBan.Name = "cmbTrangThaiBan";
+            this.cmbTrangThaiBan.Size = new System.Drawing.Size(177, 28);
+            this.cmbTrangThaiBan.TabIndex = 1;
             // 
             // label3
             // 
@@ -171,28 +193,6 @@
             this.label3.Size = new System.Drawing.Size(80, 20);
             this.label3.TabIndex = 0;
             this.label3.Text = "Trạng thái";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(101, 25);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(308, 26);
-            this.textBox1.TabIndex = 1;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(101, 25);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(308, 26);
-            this.textBox2.TabIndex = 1;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(101, 17);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(177, 28);
-            this.comboBox1.TabIndex = 1;
             // 
             // rTable
             // 
@@ -226,17 +226,17 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSuaBan;
+        private System.Windows.Forms.Button btnXemBan;
+        private System.Windows.Forms.Button btnXoaBan;
+        private System.Windows.Forms.Button btnThemBan;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox txtIDBan;
+        private System.Windows.Forms.TextBox txtTenBan;
+        private System.Windows.Forms.ComboBox cmbTrangThaiBan;
     }
 }

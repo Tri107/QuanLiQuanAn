@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLQuanAn.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,8 +16,14 @@ namespace QLQuanAn
         public rAccount()
         {
             InitializeComponent();
+            LoadAccountList();
         }
 
-        
+        public void LoadAccountList()
+        {
+            string query = "SELECT Display_Name as [Tên Hiển Thị] from ACCOUNT";
+            DataProvider provider = new DataProvider();
+            dgvTaiKhoan.DataSource = provider.ExcuteQuery(query);
+        }
     }
 }

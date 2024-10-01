@@ -29,25 +29,26 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button29 = new System.Windows.Forms.Button();
-            this.button28 = new System.Windows.Forms.Button();
-            this.button27 = new System.Windows.Forms.Button();
-            this.button26 = new System.Windows.Forms.Button();
-            this.button25 = new System.Windows.Forms.Button();
-            this.button24 = new System.Windows.Forms.Button();
+            this.btnDangXuat = new System.Windows.Forms.Button();
+            this.btnTaiKhoan = new System.Windows.Forms.Button();
+            this.btnThongKe = new System.Windows.Forms.Button();
+            this.btnLoaiMonAn = new System.Windows.Forms.Button();
+            this.btnMonAn = new System.Windows.Forms.Button();
+            this.btnBan = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.button1 = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cmbLoaiMonAn = new System.Windows.Forms.ComboBox();
+            this.nudSoLuong = new System.Windows.Forms.NumericUpDown();
+            this.btnThemMon = new System.Windows.Forms.Button();
+            this.cmbMonAn = new System.Windows.Forms.ComboBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbChonBan = new System.Windows.Forms.ComboBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.lsvDanhMuc = new System.Windows.Forms.ListView();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnThanhToan = new System.Windows.Forms.Button();
+            this.btnChuyenBan = new System.Windows.Forms.Button();
+            this.txtTongTien = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -71,28 +72,25 @@
             this.button10 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button30 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSoLuong)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Chocolate;
-            this.panel1.Controls.Add(this.button30);
-            this.panel1.Controls.Add(this.button29);
-            this.panel1.Controls.Add(this.button28);
-            this.panel1.Controls.Add(this.button27);
-            this.panel1.Controls.Add(this.button26);
-            this.panel1.Controls.Add(this.button25);
-            this.panel1.Controls.Add(this.button24);
+            this.panel1.Controls.Add(this.btnDangXuat);
+            this.panel1.Controls.Add(this.btnTaiKhoan);
+            this.panel1.Controls.Add(this.btnThongKe);
+            this.panel1.Controls.Add(this.btnLoaiMonAn);
+            this.panel1.Controls.Add(this.btnMonAn);
+            this.panel1.Controls.Add(this.btnBan);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -100,90 +98,100 @@
             this.panel1.Size = new System.Drawing.Size(217, 683);
             this.panel1.TabIndex = 0;
             // 
-            // button29
+            // btnDangXuat
             // 
-            this.button29.BackColor = System.Drawing.Color.Chocolate;
-            this.button29.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button29.ForeColor = System.Drawing.Color.White;
-            this.button29.Location = new System.Drawing.Point(38, 515);
-            this.button29.Name = "button29";
-            this.button29.Size = new System.Drawing.Size(143, 43);
-            this.button29.TabIndex = 1;
-            this.button29.Text = "Tài khoản";
-            this.button29.UseVisualStyleBackColor = false;
-            this.button29.Click += new System.EventHandler(this.button29_Click);
+            this.btnDangXuat.BackColor = System.Drawing.Color.Chocolate;
+            this.btnDangXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangXuat.ForeColor = System.Drawing.Color.White;
+            this.btnDangXuat.Location = new System.Drawing.Point(38, 586);
+            this.btnDangXuat.Name = "btnDangXuat";
+            this.btnDangXuat.Size = new System.Drawing.Size(143, 43);
+            this.btnDangXuat.TabIndex = 2;
+            this.btnDangXuat.Text = "Đăng xuất";
+            this.btnDangXuat.UseVisualStyleBackColor = false;
+            this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click);
             // 
-            // button28
+            // btnTaiKhoan
             // 
-            this.button28.BackColor = System.Drawing.Color.Chocolate;
-            this.button28.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button28.ForeColor = System.Drawing.Color.White;
-            this.button28.Location = new System.Drawing.Point(38, 441);
-            this.button28.Name = "button28";
-            this.button28.Size = new System.Drawing.Size(143, 43);
-            this.button28.TabIndex = 1;
-            this.button28.Text = "Thống kê";
-            this.button28.UseVisualStyleBackColor = false;
-            this.button28.Click += new System.EventHandler(this.button28_Click);
+            this.btnTaiKhoan.BackColor = System.Drawing.Color.Chocolate;
+            this.btnTaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTaiKhoan.ForeColor = System.Drawing.Color.White;
+            this.btnTaiKhoan.Location = new System.Drawing.Point(38, 501);
+            this.btnTaiKhoan.Name = "btnTaiKhoan";
+            this.btnTaiKhoan.Size = new System.Drawing.Size(143, 43);
+            this.btnTaiKhoan.TabIndex = 1;
+            this.btnTaiKhoan.Text = "Tài khoản";
+            this.btnTaiKhoan.UseVisualStyleBackColor = false;
+            this.btnTaiKhoan.Click += new System.EventHandler(this.btnTaiKhoan_Click);
             // 
-            // button27
+            // btnThongKe
             // 
-            this.button27.BackColor = System.Drawing.Color.Chocolate;
-            this.button27.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button27.ForeColor = System.Drawing.Color.White;
-            this.button27.Location = new System.Drawing.Point(38, 373);
-            this.button27.Name = "button27";
-            this.button27.Size = new System.Drawing.Size(143, 43);
-            this.button27.TabIndex = 1;
-            this.button27.Text = "Loại món ăn";
-            this.button27.UseVisualStyleBackColor = false;
-            this.button27.Click += new System.EventHandler(this.button27_Click);
+            this.btnThongKe.BackColor = System.Drawing.Color.Chocolate;
+            this.btnThongKe.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThongKe.ForeColor = System.Drawing.Color.White;
+            this.btnThongKe.Location = new System.Drawing.Point(38, 416);
+            this.btnThongKe.Name = "btnThongKe";
+            this.btnThongKe.Size = new System.Drawing.Size(143, 43);
+            this.btnThongKe.TabIndex = 1;
+            this.btnThongKe.Text = "Thống kê";
+            this.btnThongKe.UseVisualStyleBackColor = false;
+            this.btnThongKe.Click += new System.EventHandler(this.btnThongKe_Click);
             // 
-            // button26
+            // btnLoaiMonAn
             // 
-            this.button26.BackColor = System.Drawing.Color.Chocolate;
-            this.button26.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button26.ForeColor = System.Drawing.Color.White;
-            this.button26.Location = new System.Drawing.Point(38, 305);
-            this.button26.Name = "button26";
-            this.button26.Size = new System.Drawing.Size(143, 43);
-            this.button26.TabIndex = 1;
-            this.button26.Text = "Món ăn";
-            this.button26.UseVisualStyleBackColor = false;
-            this.button26.Click += new System.EventHandler(this.button26_Click);
+            this.btnLoaiMonAn.BackColor = System.Drawing.Color.Chocolate;
+            this.btnLoaiMonAn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLoaiMonAn.ForeColor = System.Drawing.Color.White;
+            this.btnLoaiMonAn.Location = new System.Drawing.Point(38, 331);
+            this.btnLoaiMonAn.Name = "btnLoaiMonAn";
+            this.btnLoaiMonAn.Size = new System.Drawing.Size(143, 43);
+            this.btnLoaiMonAn.TabIndex = 1;
+            this.btnLoaiMonAn.Text = "Loại món ăn";
+            this.btnLoaiMonAn.UseVisualStyleBackColor = false;
+            this.btnLoaiMonAn.Click += new System.EventHandler(this.btnLoaiMonAn_Click);
             // 
-            // button25
+            // btnMonAn
             // 
-            this.button25.BackColor = System.Drawing.Color.Chocolate;
-            this.button25.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button25.ForeColor = System.Drawing.Color.White;
-            this.button25.Location = new System.Drawing.Point(38, 235);
-            this.button25.Name = "button25";
-            this.button25.Size = new System.Drawing.Size(143, 43);
-            this.button25.TabIndex = 1;
-            this.button25.Text = "Nhân viên";
-            this.button25.UseVisualStyleBackColor = false;
-            this.button25.Click += new System.EventHandler(this.button25_Click);
+            this.btnMonAn.BackColor = System.Drawing.Color.Chocolate;
+            this.btnMonAn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMonAn.ForeColor = System.Drawing.Color.White;
+            this.btnMonAn.Location = new System.Drawing.Point(38, 246);
+            this.btnMonAn.Name = "btnMonAn";
+            this.btnMonAn.Size = new System.Drawing.Size(143, 43);
+            this.btnMonAn.TabIndex = 1;
+            this.btnMonAn.Text = "Món ăn";
+            this.btnMonAn.UseVisualStyleBackColor = false;
+            this.btnMonAn.Click += new System.EventHandler(this.btnMonAn_Click);
             // 
-            // button24
+            // btnBan
             // 
-            this.button24.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button24.ForeColor = System.Drawing.Color.White;
-            this.button24.Location = new System.Drawing.Point(38, 161);
-            this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(143, 43);
-            this.button24.TabIndex = 1;
-            this.button24.Text = "Bàn";
-            this.button24.UseVisualStyleBackColor = false;
-            this.button24.Click += new System.EventHandler(this.button24_Click);
+            this.btnBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBan.ForeColor = System.Drawing.Color.White;
+            this.btnBan.Location = new System.Drawing.Point(38, 161);
+            this.btnBan.Name = "btnBan";
+            this.btnBan.Size = new System.Drawing.Size(143, 43);
+            this.btnBan.TabIndex = 1;
+            this.btnBan.Text = "Bàn";
+            this.btnBan.UseVisualStyleBackColor = false;
+            this.btnBan.Click += new System.EventHandler(this.btnBan_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::QLQuanAn.Properties.Resources.Designer;
+            this.pictureBox1.Location = new System.Drawing.Point(38, 13);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(143, 123);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Chocolate;
-            this.panel2.Controls.Add(this.comboBox3);
-            this.panel2.Controls.Add(this.numericUpDown1);
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.comboBox2);
+            this.panel2.Controls.Add(this.cmbLoaiMonAn);
+            this.panel2.Controls.Add(this.nudSoLuong);
+            this.panel2.Controls.Add(this.btnThemMon);
+            this.panel2.Controls.Add(this.cmbMonAn);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(217, 0);
@@ -191,37 +199,37 @@
             this.panel2.Size = new System.Drawing.Size(1144, 100);
             this.panel2.TabIndex = 1;
             // 
-            // comboBox3
+            // cmbLoaiMonAn
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(775, 13);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(159, 28);
-            this.comboBox3.TabIndex = 6;
+            this.cmbLoaiMonAn.FormattingEnabled = true;
+            this.cmbLoaiMonAn.Location = new System.Drawing.Point(775, 13);
+            this.cmbLoaiMonAn.Name = "cmbLoaiMonAn";
+            this.cmbLoaiMonAn.Size = new System.Drawing.Size(159, 28);
+            this.cmbLoaiMonAn.TabIndex = 6;
             // 
-            // numericUpDown1
+            // nudSoLuong
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(941, 40);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(80, 26);
-            this.numericUpDown1.TabIndex = 5;
+            this.nudSoLuong.Location = new System.Drawing.Point(941, 40);
+            this.nudSoLuong.Name = "nudSoLuong";
+            this.nudSoLuong.Size = new System.Drawing.Size(80, 26);
+            this.nudSoLuong.TabIndex = 5;
             // 
-            // button1
+            // btnThemMon
             // 
-            this.button1.Location = new System.Drawing.Point(1027, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 75);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Thêm Món";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnThemMon.Location = new System.Drawing.Point(1027, 12);
+            this.btnThemMon.Name = "btnThemMon";
+            this.btnThemMon.Size = new System.Drawing.Size(75, 75);
+            this.btnThemMon.TabIndex = 4;
+            this.btnThemMon.Text = "Thêm Món";
+            this.btnThemMon.UseVisualStyleBackColor = true;
             // 
-            // comboBox2
+            // cmbMonAn
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(775, 59);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(159, 28);
-            this.comboBox2.TabIndex = 3;
+            this.cmbMonAn.FormattingEnabled = true;
+            this.cmbMonAn.Location = new System.Drawing.Point(775, 59);
+            this.cmbMonAn.Name = "cmbMonAn";
+            this.cmbMonAn.Size = new System.Drawing.Size(159, 28);
+            this.cmbMonAn.TabIndex = 3;
             // 
             // panel3
             // 
@@ -230,69 +238,69 @@
             this.panel3.Size = new System.Drawing.Size(200, 339);
             this.panel3.TabIndex = 2;
             // 
-            // comboBox1
+            // cmbChonBan
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(6, 51);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(136, 28);
-            this.comboBox1.TabIndex = 3;
+            this.cmbChonBan.FormattingEnabled = true;
+            this.cmbChonBan.Location = new System.Drawing.Point(6, 51);
+            this.cmbChonBan.Name = "cmbChonBan";
+            this.cmbChonBan.Size = new System.Drawing.Size(136, 28);
+            this.cmbChonBan.TabIndex = 3;
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.listView1);
+            this.panel4.Controls.Add(this.lsvDanhMuc);
             this.panel4.Location = new System.Drawing.Point(992, 106);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(369, 471);
             this.panel4.TabIndex = 2;
             // 
-            // listView1
+            // lsvDanhMuc
             // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(3, 3);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(366, 465);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.lsvDanhMuc.HideSelection = false;
+            this.lsvDanhMuc.Location = new System.Drawing.Point(3, 3);
+            this.lsvDanhMuc.Name = "lsvDanhMuc";
+            this.lsvDanhMuc.Size = new System.Drawing.Size(366, 465);
+            this.lsvDanhMuc.TabIndex = 0;
+            this.lsvDanhMuc.UseCompatibleStateImageBehavior = false;
+            this.lsvDanhMuc.View = System.Windows.Forms.View.Details;
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FloralWhite;
-            this.panel5.Controls.Add(this.button3);
-            this.panel5.Controls.Add(this.button2);
-            this.panel5.Controls.Add(this.textBox1);
-            this.panel5.Controls.Add(this.comboBox1);
+            this.panel5.Controls.Add(this.btnThanhToan);
+            this.panel5.Controls.Add(this.btnChuyenBan);
+            this.panel5.Controls.Add(this.txtTongTien);
+            this.panel5.Controls.Add(this.cmbChonBan);
             this.panel5.Controls.Add(this.label1);
             this.panel5.Location = new System.Drawing.Point(992, 583);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(369, 100);
             this.panel5.TabIndex = 3;
             // 
-            // button3
+            // btnThanhToan
             // 
-            this.button3.Location = new System.Drawing.Point(252, 36);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 52);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Thanh Toán";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnThanhToan.Location = new System.Drawing.Point(252, 36);
+            this.btnThanhToan.Name = "btnThanhToan";
+            this.btnThanhToan.Size = new System.Drawing.Size(75, 52);
+            this.btnThanhToan.TabIndex = 2;
+            this.btnThanhToan.Text = "Thanh Toán";
+            this.btnThanhToan.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnChuyenBan
             // 
-            this.button2.Location = new System.Drawing.Point(148, 36);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(98, 52);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Chuyển bàn";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnChuyenBan.Location = new System.Drawing.Point(148, 36);
+            this.btnChuyenBan.Name = "btnChuyenBan";
+            this.btnChuyenBan.Size = new System.Drawing.Size(98, 52);
+            this.btnChuyenBan.TabIndex = 2;
+            this.btnChuyenBan.Text = "Chuyển bàn";
+            this.btnChuyenBan.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // txtTongTien
             // 
-            this.textBox1.Location = new System.Drawing.Point(121, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(202, 26);
-            this.textBox1.TabIndex = 1;
+            this.txtTongTien.Location = new System.Drawing.Point(121, 4);
+            this.txtTongTien.Name = "txtTongTien";
+            this.txtTongTien.Size = new System.Drawing.Size(202, 26);
+            this.txtTongTien.TabIndex = 1;
             // 
             // label1
             // 
@@ -521,28 +529,6 @@
             this.button4.Text = "button4";
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::QLQuanAn.Properties.Resources.Designer;
-            this.pictureBox1.Location = new System.Drawing.Point(38, 13);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(143, 123);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // button30
-            // 
-            this.button30.BackColor = System.Drawing.Color.Chocolate;
-            this.button30.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button30.ForeColor = System.Drawing.Color.White;
-            this.button30.Location = new System.Drawing.Point(38, 587);
-            this.button30.Name = "button30";
-            this.button30.Size = new System.Drawing.Size(143, 43);
-            this.button30.TabIndex = 2;
-            this.button30.Text = "Đăng xuất";
-            this.button30.UseVisualStyleBackColor = false;
-            // 
             // RestaurantManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -558,16 +544,15 @@
             this.Name = "RestaurantManager";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Phần mềm quản lí quán ăn";
-            this.Load += new System.EventHandler(this.RestaurantManager_Load);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSoLuong)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -580,16 +565,16 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Button btnThemMon;
+        private System.Windows.Forms.ComboBox cmbMonAn;
+        private System.Windows.Forms.ComboBox cmbChonBan;
+        private System.Windows.Forms.ListView lsvDanhMuc;
+        private System.Windows.Forms.NumericUpDown nudSoLuong;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox cmbLoaiMonAn;
+        private System.Windows.Forms.Button btnThanhToan;
+        private System.Windows.Forms.Button btnChuyenBan;
+        private System.Windows.Forms.TextBox txtTongTien;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button7;
@@ -611,13 +596,12 @@
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button25;
-        private System.Windows.Forms.Button button24;
+        private System.Windows.Forms.Button btnBan;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button29;
-        private System.Windows.Forms.Button button28;
-        private System.Windows.Forms.Button button27;
-        private System.Windows.Forms.Button button26;
-        private System.Windows.Forms.Button button30;
+        private System.Windows.Forms.Button btnTaiKhoan;
+        private System.Windows.Forms.Button btnThongKe;
+        private System.Windows.Forms.Button btnLoaiMonAn;
+        private System.Windows.Forms.Button btnMonAn;
+        private System.Windows.Forms.Button btnDangXuat;
     }
 }

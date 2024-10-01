@@ -17,51 +17,48 @@ namespace QLQuanAn
             InitializeComponent();
         }
 
-        private void RestaurantManager_Load(object sender, EventArgs e)
+        private void btnBan_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void button29_Click(object sender, EventArgs e)
-        {
-            rAccount rAccount = new rAccount();
-            rAccount.ShowDialog();
-            rAccount.Hide();
+            rTable rTable = new rTable();
+            this.Hide();
+            rTable.ShowDialog();
             this.Show();
         }
 
-        private void button24_Click(object sender, EventArgs e)
-        {
-            rTable rTable = new rTable();
-            rTable.ShowDialog();
-        }
-
-        private void button25_Click(object sender, EventArgs e)
-        {
-            rStaff rStaff = new rStaff();
-            rStaff.ShowDialog();
-        }
-
-        private void button26_Click(object sender, EventArgs e)
+        private void btnMonAn_Click(object sender, EventArgs e)
         {
             rFood rFood = new rFood();
-            rFood.ShowDialog();
+            this.Hide(); rFood.ShowDialog();
+            this.Show();
         }
 
-        private void button27_Click(object sender, EventArgs e)
+        private void btnLoaiMonAn_Click(object sender, EventArgs e)
         {
             rFoodCategories rFoodCategories = new rFoodCategories();
-            rFoodCategories.ShowDialog();
+            rFoodCategories.Hide(); rFoodCategories.ShowDialog();
+            this.Show();
         }
 
-        private void button28_Click(object sender, EventArgs e)
+        private void btnThongKe_Click(object sender, EventArgs e)
         {
             rReports rReports = new rReports();
-            rReports.ShowDialog();
+            rReports.Hide(); rReports.ShowDialog();
+            this.Show();
         }
 
-        private void button30_Click(object sender, EventArgs e)
+        private void btnTaiKhoan_Click(object sender, EventArgs e)
         {
+            rAccount rAccount = new rAccount();
+            this.Hide(); rAccount.ShowDialog();
+            this.Show();
+
+        }
+
+        private void btnDangXuat_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            this.Close();
+            login.ShowDialog();
             
         }
     }
