@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLQuanAn.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,32 +17,6 @@ namespace QLQuanAn
         {
             InitializeComponent();
         }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxPassword_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Login_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void buttonExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -56,11 +31,24 @@ namespace QLQuanAn
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            RestaurantManager r= new RestaurantManager();
-            this.Hide();//ẩn form login
-            r.ShowDialog();//hiện theo thứ tự
+            string username = textBoxUsername.Text;
+            string password = textBoxPassword.Text;
+            if (fLogin(username, password))
+            {
+                RestaurantManager r = new RestaurantManager();
+                this.Hide();//ẩn form login
+                r.ShowDialog();//hiện theo thứ tự
+            }
+            else
+            {
+                MessageBox.Show("Sai tên tài khoản hoặc mật khẩu");
+            }
             
 
+        }
+        bool fLogin(string username,string password)
+        {
+            return AccountDAO.Instance.fLogin(username, password);
         }
     }
 }

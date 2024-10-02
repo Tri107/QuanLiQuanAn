@@ -43,14 +43,12 @@
             this.btnXemTaiKhoan = new System.Windows.Forms.Button();
             this.btnXoaTaiKhoan = new System.Windows.Forms.Button();
             this.btnThemTaiKhoan = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.dgvTaiKhoan = new System.Windows.Forms.DataGridView();
             this.btnResetPass = new System.Windows.Forms.Button();
+            this.dgvTaiKhoan = new System.Windows.Forms.DataGridView();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTaiKhoan)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,9 +56,9 @@
             // 
             this.panel5.Controls.Add(this.cmbLoaiMonAn);
             this.panel5.Controls.Add(this.label3);
-            this.panel5.Location = new System.Drawing.Point(624, 331);
+            this.panel5.Location = new System.Drawing.Point(708, 331);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(633, 97);
+            this.panel5.Size = new System.Drawing.Size(549, 97);
             this.panel5.TabIndex = 13;
             // 
             // cmbLoaiMonAn
@@ -84,9 +82,9 @@
             // 
             this.panel4.Controls.Add(this.txtTenHienThi);
             this.panel4.Controls.Add(this.label2);
-            this.panel4.Location = new System.Drawing.Point(624, 228);
+            this.panel4.Location = new System.Drawing.Point(708, 228);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(633, 97);
+            this.panel4.Size = new System.Drawing.Size(549, 97);
             this.panel4.TabIndex = 14;
             // 
             // txtTenHienThi
@@ -109,9 +107,9 @@
             // 
             this.panel3.Controls.Add(this.txtTenTaiKhoan);
             this.panel3.Controls.Add(this.label1);
-            this.panel3.Location = new System.Drawing.Point(624, 125);
+            this.panel3.Location = new System.Drawing.Point(708, 125);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(633, 97);
+            this.panel3.Size = new System.Drawing.Size(549, 97);
             this.panel3.TabIndex = 11;
             // 
             // txtTenTaiKhoan
@@ -186,25 +184,6 @@
             this.btnThemTaiKhoan.Text = "Thêm";
             this.btnThemTaiKhoan.UseVisualStyleBackColor = true;
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.dgvTaiKhoan);
-            this.panel1.Location = new System.Drawing.Point(-158, 125);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(776, 483);
-            this.panel1.TabIndex = 9;
-            // 
-            // dgvTaiKhoan
-            // 
-            this.dgvTaiKhoan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTaiKhoan.Location = new System.Drawing.Point(3, 3);
-            this.dgvTaiKhoan.Name = "dgvTaiKhoan";
-            this.dgvTaiKhoan.RowHeadersWidth = 62;
-            this.dgvTaiKhoan.RowTemplate.Height = 28;
-            this.dgvTaiKhoan.Size = new System.Drawing.Size(770, 477);
-            this.dgvTaiKhoan.TabIndex = 0;
-            
-            // 
             // btnResetPass
             // 
             this.btnResetPass.Location = new System.Drawing.Point(1138, 450);
@@ -214,17 +193,27 @@
             this.btnResetPass.Text = "Đặt lại mật khẩu";
             this.btnResetPass.UseVisualStyleBackColor = true;
             // 
+            // dgvTaiKhoan
+            // 
+            this.dgvTaiKhoan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTaiKhoan.Location = new System.Drawing.Point(12, 125);
+            this.dgvTaiKhoan.Name = "dgvTaiKhoan";
+            this.dgvTaiKhoan.RowHeadersWidth = 62;
+            this.dgvTaiKhoan.RowTemplate.Height = 28;
+            this.dgvTaiKhoan.Size = new System.Drawing.Size(690, 470);
+            this.dgvTaiKhoan.TabIndex = 0;
+            // 
             // rAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1269, 610);
+            this.Controls.Add(this.dgvTaiKhoan);
             this.Controls.Add(this.btnResetPass);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
             this.Name = "rAccount";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tài khoản";
@@ -235,7 +224,6 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTaiKhoan)).EndInit();
             this.ResumeLayout(false);
 
@@ -258,8 +246,7 @@
         private System.Windows.Forms.Button btnXemTaiKhoan;
         private System.Windows.Forms.Button btnXoaTaiKhoan;
         private System.Windows.Forms.Button btnThemTaiKhoan;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dgvTaiKhoan;
         private System.Windows.Forms.Button btnResetPass;
+        private System.Windows.Forms.DataGridView dgvTaiKhoan;
     }
 }
