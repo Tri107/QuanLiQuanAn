@@ -62,7 +62,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(307, 400);
             this.panel1.TabIndex = 0;
-           
             // 
             // buttonExit
             // 
@@ -92,8 +91,8 @@
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.Size = new System.Drawing.Size(170, 26);
             this.textBoxPassword.TabIndex = 7;
+            this.textBoxPassword.Text = "1";
             this.textBoxPassword.UseSystemPasswordChar = true;
-            
             // 
             // label5
             // 
@@ -111,6 +110,7 @@
             this.textBoxUsername.Name = "textBoxUsername";
             this.textBoxUsername.Size = new System.Drawing.Size(170, 26);
             this.textBoxUsername.TabIndex = 5;
+            this.textBoxUsername.Text = "admin";
             // 
             // label4
             // 
@@ -139,7 +139,6 @@
             this.label2.Size = new System.Drawing.Size(100, 3);
             this.label2.TabIndex = 2;
             this.label2.Text = "label2";
-            
             // 
             // pictureBox1
             // 
@@ -150,7 +149,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
-            
             // 
             // imageList
             // 
@@ -172,7 +170,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng nhập";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Login_FormClosing);
-            
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

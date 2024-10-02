@@ -291,6 +291,8 @@
             // 
             // flpBan
             // 
+            this.flpBan.AllowDrop = true;
+            this.flpBan.AutoScroll = true;
             this.flpBan.Location = new System.Drawing.Point(223, 106);
             this.flpBan.Name = "flpBan";
             this.flpBan.Size = new System.Drawing.Size(763, 577);
