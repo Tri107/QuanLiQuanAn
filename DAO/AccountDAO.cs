@@ -19,8 +19,8 @@ namespace QLQuanAn.DAO
         private AccountDAO() { }
         public bool fLogin(string username,string password)
         {
-            string query = "Select * from ACCOUNT Where USERNAME = N'"+username+"' AND PASSWORD =N'"+password+"' ";
-            DataTable result = DataProvider.Instance.ExcuteQuery(query);
+            string query = "USP_LOGIN @UserName , @PassWord";
+            DataTable result = DataProvider.Instance.ExcuteQuery(query,new object[] {username,password });
             return result.Rows.Count > 0;
         }
     }

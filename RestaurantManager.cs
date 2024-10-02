@@ -61,5 +61,7 @@ namespace QLQuanAn
             login.ShowDialog();
             
         }
+
+       
     }
 }
