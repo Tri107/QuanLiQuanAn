@@ -106,8 +106,15 @@ namespace QLQuanAn
             txtTongTien.Text=totalPrice.ToString("c");
         }
         #endregion
-
+        #region Events
+        void button_Click(object sender, EventArgs e)
+        {
+            int tableID = ((sender as Button).Tag as Table).ID;
+            showBill(tableID);
+        }
         #endregion
+
+
     }
 }
 
