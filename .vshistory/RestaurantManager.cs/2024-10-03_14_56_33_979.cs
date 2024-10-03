@@ -103,7 +103,7 @@ namespace QLQuanAn
                 totalPrice += menu.Total_payment;
                 lsvDanhMuc.Items.Add(lsvItem);
             }
-            txtTongTien.Text=totalPrice.ToString("c");
+            txtTongTien.Text=totalPrice.ToString("c"+"vnd");
         }
         #endregion
         #region Events

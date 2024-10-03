@@ -20,7 +20,7 @@ namespace QLQuanAn.DAO
         public List<Menu> GetListMenu(int id)
         {
             List<Menu> listMenu = new List<Menu>();
-            string query = "SELECT f.ITEM_NAME, bi.QUANTITY, f.PRICE, f.PRICE * bi.QUANTITY AS total_payment FROM dbo.BILL_DETAIL AS bi JOIN dbo.Bill AS b ON bi.BILL_ID = b.id JOIN dbo.MENU_ITEM AS f ON bi.ITEM_ID = f.id WHERE b.STATUS = 0 AND b.TABLE_ID =" + id;
+            string query = "SELECT f.ITEM_NAME, bi.QUANTITY, f.PRICE, f.PRICE * bi.QUANTITY AS total_payment FROM dbo.BILL_DETAIL AS bi JOIN dbo.Bill AS b ON bi.BILL_ID = b.id JOIN dbo.MENU_ITEM AS f ON bi.ITEM_ID = f.id WHERE b.TABLE_ID =" + id;
             DataTable data = DataProvider.Instance.ExcuteQuery(query);
             foreach (DataRow row in data.Rows)
             {
