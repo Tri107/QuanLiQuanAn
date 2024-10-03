@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Menu = QLQuanAn.DTO.Menu;
 
 namespace QLQuanAn
 {
@@ -73,6 +74,8 @@ namespace QLQuanAn
             foreach (Table table in tableList) { 
                 Button btn = new Button() {Width = TableDAO.TableChieuRong,Height = TableDAO.TableChieuDai};
                 btn.Text = table.NAME + Environment.NewLine+ table.STATUS;
+                btn.Click += button_Click;
+                btn.Tag = table;
                 switch (table.STATUS)
                 {
                     case "Trống":
@@ -86,7 +89,28 @@ namespace QLQuanAn
             }
 
         }
+        void showBill(int id)
+        {
+            lsvDanhMuc.Items.Clear();
+            List<Menu> listMenu = MenuDAO.Instance.GetListMenu(id);
+            foreach (Menu menu in listMenu)
+            {
+                ListViewItem lsvItem = new ListViewItem(menu.Food_Name.ToString());
+                lsvItem.SubItems.Add(menu.Quantity1.ToString());
+                lsvItem.SubItems.Add(menu.Price.ToString());
+                lsvItem.SubItems.Add(menu.Total_payment.ToString());
+                lsvDanhMuc.Items.Add(lsvItem);
+            }
+        }
+        #endregion
+        #region Events
+        void button_Click(object sender, EventArgs e)
+        {
+            int tableID = ((sender as Button).Tag as Table).ID;
+            showBill(tableID);
+        }
         #endregion
 
     }
 }
+
