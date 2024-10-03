@@ -22,7 +22,7 @@ namespace QLQuanAn.DAO
         public List<Table> LoadTableList()
         {
             List<Table> list = new List<Table>();
-            DataTable data =  DataProvider.Instance.ExcuteQuery("USP_GetTableList");
+            DataTable data =  DataProvider.Instance.ExecuteQuery("USP_GetTableList");
             foreach (DataRow row in data.Rows) { 
                 Table table = new Table(row);
                 list.Add(table);

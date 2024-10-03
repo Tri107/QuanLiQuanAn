@@ -20,7 +20,7 @@ namespace QLQuanAn.DAO
         public bool fLogin(string username,string password)
         {
             string query = "USP_LOGIN @UserName , @PassWord";
-            DataTable result = DataProvider.Instance.ExcuteQuery(query,new object[] {username,password });
+            DataTable result = DataProvider.Instance.ExecuteQuery(query,new object[] {username,password });
             return result.Rows.Count > 0;
         }
     }

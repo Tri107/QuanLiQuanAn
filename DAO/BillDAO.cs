@@ -20,7 +20,7 @@ namespace QLQuanAn.DAO
         private BillDAO() { }
         public int GetUnChecBillIDByTableID(int ID)
         {
-            DataTable data = DataProvider.Instance.ExcuteQuery("SELECT * FROM BILL WHERE ID = " + ID + " AND STATUS = 0");
+            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT * FROM BILL WHERE ID = " + ID + " AND STATUS = 0");
             if (data.Rows.Count > 0)
             {
                 Bill bill = new Bill(data.Rows[0]);

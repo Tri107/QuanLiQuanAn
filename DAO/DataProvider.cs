@@ -20,7 +20,8 @@ namespace QLQuanAn.DAO
         private DataProvider() { }
 
         private string connectionSTR = @"Data Source=.\;Initial Catalog=QUANLIQUANAN;Integrated Security=True";
-        public DataTable ExcuteQuery(string query,object[] parameter=null)
+        
+        public DataTable ExecuteQuery(string query,object[] parameter=null) // tra ve table
         {
             DataTable data = new DataTable();
             using (SqlConnection connection = new SqlConnection(connectionSTR))
@@ -46,5 +47,58 @@ namespace QLQuanAn.DAO
             }
             return data;
         }
+        
+        public int ExecuteNonQuery(string query, object[] parameter = null) // tra ve so dong thanh cong
+        {
+            int data = 0;
+            using (SqlConnection connection = new SqlConnection(connectionSTR))
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand(query, connection);
+                if (parameter != null)
+                {
+                    string[] listParemeter = query.Split(' ');
+                    int i = 0;
+                    foreach (string s in listParemeter)
+                    {
+                        if (s.Contains('@'))
+                        {
+                            command.Parameters.AddWithValue(s, parameter[i]);
+                            i++;
+                        }
+                    }
+                }
+
+                data = command.ExecuteNonQuery();
+                connection.Close();
+            }
+            return data;
+        }
+        public object ExecuteScalar(string query, object[] parameter = null)
+        {
+            object data = 0;
+            using (SqlConnection connection = new SqlConnection(connectionSTR))
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand(query, connection);
+                if (parameter != null)
+                {
+                    string[] listParemeter = query.Split(' ');
+                    int i = 0;
+                    foreach (string s in listParemeter)
+                    {
+                        if (s.Contains('@'))
+                        {
+                            command.Parameters.AddWithValue(s, parameter[i]);
+                            i++;
+                        }
+                    }
+                }
+
+                data = command.ExecuteScalar();
+                connection.Close();
+            }
+            return data;
+        }// tra ve so luong
     }
 }
