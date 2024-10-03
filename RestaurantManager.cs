@@ -73,6 +73,7 @@ namespace QLQuanAn
             foreach (Table table in tableList) { 
                 Button btn = new Button() {Width = TableDAO.TableChieuRong,Height = TableDAO.TableChieuDai};
                 btn.Text = table.NAME + Environment.NewLine+ table.STATUS;
+               
                 switch (table.STATUS)
                 {
                     case "Trống":
@@ -87,6 +88,8 @@ namespace QLQuanAn
 
         }
         #endregion
+        #region Events
 
+        #endregion
     }
 }
