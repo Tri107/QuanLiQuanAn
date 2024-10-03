@@ -93,21 +93,24 @@ namespace QLQuanAn
         {
             lsvDanhMuc.Items.Clear();
             List<Menu> listMenu = MenuDAO.Instance.GetListMenu(id);
-            float totalPrice = 0;
             foreach (Menu menu in listMenu)
             {
                 ListViewItem lsvItem = new ListViewItem(menu.Food_Name.ToString());
                 lsvItem.SubItems.Add(menu.Quantity1.ToString());
                 lsvItem.SubItems.Add(menu.Price.ToString());
                 lsvItem.SubItems.Add(menu.Total_payment.ToString());
-                totalPrice += menu.Total_payment;
                 lsvDanhMuc.Items.Add(lsvItem);
             }
-            txtTongTien.Text=totalPrice.ToString("c");
+        }
+        #endregion
+        #region Events
+        void button_Click(object sender, EventArgs e)
+        {
+            int tableID = ((sender as Button).Tag as Table).ID;
+            showBill(tableID);
         }
         #endregion
 
-        #endregion
     }
 }
 
