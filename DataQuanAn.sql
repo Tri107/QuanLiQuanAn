@@ -205,7 +205,7 @@ VALUES
     (1, 1, 10, 120000),
     (2, 2, 10, 150000);
 GO
-
+/*
 SELECT * FROM dbo.BILL
 SELECT * FROM dbo.BILL_DETAIL
 SELECT * FROM dbo.MENU_ITEM
@@ -218,4 +218,41 @@ SELECT f.ITEM_NAME, bi.QUANTITY, f.PRICE, f.PRICE * bi.QUANTITY AS total_payment
 FROM dbo.BILL_DETAIL AS bi
 JOIN dbo.Bill AS b ON bi.BILL_ID = b.id
 JOIN dbo.MENU_ITEM AS f ON bi.ITEM_ID = f.id
-WHERE b.TABLE_ID = 1; 
+WHERE b.TABLE_ID = 1;
+*/
+CREATE PROC USP_InsertBill
+@idTable INT 
+AS
+BEGIN
+	INSERT BILL (CHECKIN, CHECKOUT,TABLE_ID, STATUS)
+	VALUES (GETDATE(),NULL,@idTable,0)
+END
+GO
+
+ALTER PROC USP_InsertBillDetail
+@idBill INT, @idFood INT, @quantity INT
+AS
+BEGIN
+	DECLARE @isExitsBillDetail int
+	DECLARE @foodQuantity INT =1 
+	SELECT @isExitsBillDetail = ID,@quantity = QUANTITY 
+	FROM BILL_DETAIL 
+	WHERE BILL_ID = @idBill AND ITEM_ID = @idFood
+	IF(@isExitsBillDetail > 0)
+	BEGIN
+		DECLARE @newQuantity INT = @foodQuantity + @quantity
+		IF(@newQuantity > 0)
+			UPDATE BILL_DETAIL SET QUANTITY = @foodQuantity + @quantity
+			WHERE ITEM_ID = @idFood
+		ELSE
+			DELETE BILL_DETAIL WHERE BILL_ID = @idBill AND ITEM_ID = @idFood 
+	END
+	ELSE
+	BEGIN
+		INSERT BILL_DETAIL (BILL_ID, ITEM_ID,QUANTITY)
+		VALUES (@idBill, @idFood, @quantity)
+	END
+	
+	
+END
+GO
