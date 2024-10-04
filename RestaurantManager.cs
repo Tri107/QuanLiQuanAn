@@ -21,6 +21,7 @@ namespace QLQuanAn
         {
             InitializeComponent();
             LoadTable();
+            LoadFoodCategories();
         }
 
         private void btnBan_Click(object sender, EventArgs e)
@@ -68,6 +69,18 @@ namespace QLQuanAn
             
         }
         #region Method
+        void LoadFoodListByCategories(int id)
+        {
+            List<Food> listFood = FoodDAO.Instance.GetListCategories(id);
+            cmbMonAn.DataSource = listFood;
+            cmbMonAn.DisplayMember = "Name";
+        }
+        void LoadFoodCategories()
+        {
+            List<FoodCategories> foodCategories = CategoriesDAO.Instance.GetListCategories();
+            cmbLoaiMonAn.DataSource = foodCategories;
+            cmbLoaiMonAn.DisplayMember = "Name";
+        }
         void LoadTable()
         {
             List<Table> tableList = TableDAO.Instance.LoadTableList();
@@ -107,11 +120,47 @@ namespace QLQuanAn
         }
         #endregion
         #region Events
-        void button_Click(object sender, EventArgs e)
+        private void button_Click(object sender, EventArgs e)
         {
             int tableID = ((sender as Button).Tag as Table).ID;
+            lsvDanhMuc.Tag = (sender as Button).Tag;
             showBill(tableID);
         }
+        private void cmbLoaiMonAn_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int id = 0;
+            ComboBox cmb = sender as ComboBox;
+            if (cmb.SelectedItem == null)
+                return;
+            FoodCategories select = cmb.SelectedItem as FoodCategories;
+            id=select.Id;
+            LoadFoodListByCategories(id);
+        }
+        private void btnThemMon_Click(object sender, EventArgs e)
+        {
+            Table table = lsvDanhMuc.Tag as Table;
+            if (table == null)
+            {
+                MessageBox.Show("Không tìm thấy bàn. Vui lòng chọn bàn trước.");
+                return;
+            }
+            int idBill = BillDAO.Instance.GetUnChecBillIDByTableID(table.ID);
+            int foodID = (cmbMonAn.SelectedItem as Food).Id;
+            int quantity = (int)nudSoLuong.Value;
+
+            if (idBill == -1)
+            {
+                BillDAO.Instance.InsertBill(table.ID);
+                BillDetailDAO.Instance.InsertBillDetail(BillDAO.Instance.GetMaxBill(), foodID, quantity);
+            }
+            else
+            {
+                BillDetailDAO.Instance.InsertBillDetail(idBill, foodID, quantity);
+            }
+            showBill(table.ID);
+
+        }
+
         #endregion
 
 

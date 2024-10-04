@@ -28,6 +28,22 @@ namespace QLQuanAn.DAO
             }
             return -1;
         }
+        public void InsertBill(int id)
+        {
+            DataProvider.Instance.ExecuteNonQuery("USP_InsertBill @idTable ",new object[] {id});
+        }
+        public int GetMaxBill()
+        {
+            try
+            {
+                return (int)DataProvider.Instance.ExecuteScalar("select Max(BILL_ID) from BILL");
+            }
+            catch
+            {
+                return 1;
+            }
+            
+        }
     }
    
 }

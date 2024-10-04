@@ -21,13 +21,17 @@ namespace QLQuanAn.DAO
         public List<BillDetail> GetListBillDetail(int id)
         {
             List<BillDetail> listBillDetail = new List<BillDetail>();
-            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT * FROM BILL_DETAIL WHERE ID =" + id);
+            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT * FROM BILL_DETAIL WHERE ID = " + id);
             foreach (DataRow row in data.Rows)
             {
                 BillDetail detail = new BillDetail(row);
                 listBillDetail.Add(detail);
             }
             return listBillDetail;
+        }
+        public void InsertBillDetail(int id,int idFood,int idquantity)
+        {
+            DataProvider.Instance.ExecuteNonQuery("USP_InsertBillDetail @idBill , @idFood , @quantity ", new object[] { id,idFood,idquantity });
         }
     }
 }
